@@ -19,7 +19,7 @@ if(inputChoice == 'p'){
     console.log('Scelta non valida')
 }
 
-let userNumber = parseInt(prompt('Insrisci un numero da 1 a 5'));
+let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 console.log(`Il tuo numero è : ${userNumber}`);
 
 function cpuNumberGenerator(min,max){
@@ -42,9 +42,9 @@ function evenOdd(x){
     }
 }
 
-if((evenOdd(sum) == 'even' && userChoice) == 'even'){
+if(evenOdd(sum) == 'even' && userChoice == 'even'){
     console.log(`Hai vinto!`)
-}else if((evenOdd(sum) == 'odd' && userChoice) == 'odd'){
+}else if(evenOdd(sum) == 'odd' && userChoice == 'odd'){
     console.log('Hai vinto!')
 }else{
     console.log('Hai perso')
