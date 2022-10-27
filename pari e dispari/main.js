@@ -22,7 +22,14 @@ if(inputChoice == 'p'){
 let userNumber = parseInt(prompt('Insrisci un numero da 1 a 5'));
 console.log(`Il tuo numero è : ${userNumber}`);
 
-function cpuNumber(min,max){
+function cpuNumberGenerator(min,max){
 
-    
-}
+    return parseInt(Math.floor(Math.random() * (max - min + 1) + min));
+};
+
+let cpuNumber = cpuNumberGenerator(1,5)
+console.log(`Il numero della cpu è: ${cpuNumber}`);
+
+let sum = userNumber + cpuNumber;
+console.log(`La somma dei numeri è ${sum}`);
+
