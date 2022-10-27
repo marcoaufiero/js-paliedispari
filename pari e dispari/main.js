@@ -6,14 +6,14 @@
 // Dichiariamo chi ha vinto.
 
 let inputChoice = prompt("Inserisci 'p' se vuoi scergliere pari o 'd' se vuoi scegliere dispari");
-let even;
-let odd;
+let userChoice;
+
 
 if(inputChoice == 'p'){
-    even = true;
+    userChoice = 'even';
     console.log('Hai scelto pari')
 }else if(inputChoice == 'd'){
-    odd = true;
+    userChoice = 'odd';
     console.log('Hai scelto dispari')
 }else{
     console.log('Scelta non valida')
@@ -36,14 +36,16 @@ console.log(`La somma dei numeri è ${sum}`);
 function evenOdd(x){
 
     if(x % 2 == 0){
-        return true;
+        return 'even';
     }else{
-        return false;
+        return 'odd';
     }
 }
 
-if(evenOdd(sum) && inputChoice){
+if((evenOdd(sum) == 'even' && userChoice) == 'even'){
     console.log(`Hai vinto!`)
+}else if((evenOdd(sum) == 'odd' && userChoice) == 'odd'){
+    console.log('Hai vinto!')
 }else{
     console.log('Hai perso')
 }
