@@ -10,10 +10,10 @@ let even;
 let odd;
 
 if(inputChoice == 'p'){
-    inputChoice = even;
+    even = true;
     console.log('Hai scelto pari')
 }else if(inputChoice == 'd'){
-    inputChoice = odd;
+    odd = true;
     console.log('Hai scelto dispari')
 }else{
     console.log('Scelta non valida')
@@ -33,3 +33,17 @@ console.log(`Il numero della cpu è: ${cpuNumber}`);
 let sum = userNumber + cpuNumber;
 console.log(`La somma dei numeri è ${sum}`);
 
+function evenOdd(x){
+
+    if(x % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+if(evenOdd(sum) && inputChoice){
+    console.log(`Hai vinto!`)
+}else{
+    console.log('Hai perso')
+}
